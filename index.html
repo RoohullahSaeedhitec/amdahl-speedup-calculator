@@ -1,17 +1,38 @@
-
 <!DOCTYPE html>
 <html>
 <head>
- <title>My CA Tool</title>
- <link rel="stylesheet" href="style.css">
+    <title>Amdahl's Law Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <h1>Number System Converter</h1>
 
- <input id="num" placeholder="Type a decimal number">
- <button onclick="convert()">Convert</button>
- <p id="result"></p>
+    <div class="container">
 
- <script src="script.js"></script>
+        <header>
+            <h1>Amdahl's Law Speedup Calculator</h1>
+            <p>CPU Performance Calculator</p>
+        </header>
+
+        <div class="input-area">
+            <h2>Enter Values</h2>
+
+            <label>Fraction Improved:</label>
+            <input type="number" placeholder="Enter fraction">
+
+            <label>Speedup of Improved Part:</label>
+            <input type="number" placeholder="Enter speedup">
+
+            <button>Calculate</button>
+        </div>
+
+        <div class="result-area">
+            <h2>Result</h2>
+            <p>Speedup result will appear here.</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
