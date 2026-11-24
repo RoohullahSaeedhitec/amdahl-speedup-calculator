@@ -1,26 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amdahl's Law Speedup Calculator</title>
-  <link rel="stylesheet" href="style.css">
+    <title>Amdahl's Law Speedup Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="card">
-    <h1>Amdahl's Law Speedup Calculator</h1>
-    <p class="formula">Speedup = 1 / ((1 - f) + f / s)</p>
 
-    <label for="fraction">Fraction improved (f, between 0 and 1)</label>
-    <input type="text" id="fraction" placeholder="e.g. 0.6">
+<div class="container">
 
-    <label for="speedup">Speedup of that part (s)</label>
-    <input type="text" id="speedup" placeholder="e.g. 2">
+    <header>
+        <h1>Amdahl's Law Speedup Calculator</h1>
+        <p>CPU Performance Calculator</p>
+    </header>
 
-    <button onclick="calculate()">Calculate</button>
+    <div class="section">
+        <h2>Speedup Calculator</h2>
 
-    <p id="result"></p>
-  </div>
-  <script src="script.js"></script>
+        <label>Fraction Improved (0 to 1)</label>
+        <input type="number" id="fraction"
+        placeholder="Example: 0.5" step="any">
+
+        <label>Speedup of Improved Part</label>
+        <input type="number" id="speedup"
+        placeholder="Example: 2" step="any">
+
+        <button type="button" onclick="calculateSpeedup()">
+            Calculate Speedup
+        </button>
+
+        <div class="result-area">
+            <h3>Calculation Result</h3>
+            <p id="result">Your result will appear here.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Improved Fraction</h2>
+        <label>Fraction Slider</label>
+
+        <input type="range" id="slider"
+        min="0" max="100" value="50">
+
+        <p>Use the slider to select a fraction.</p>
+    </div>
+
+    <div class="section">
+        <h2>Performance Comparison</h2>
+
+        <p>Old Time</p>
+        <div class="bar old">Old Time</div>
+
+        <p>New Time</p>
+        <div class="bar new">New Time</div>
+    </div>
+
+    <div class="section">
+        <h2>Calculation Steps</h2>
+
+        <p>1. Enter the fraction improved.</p>
+        <p>2. Enter the speedup of improved part.</p>
+        <p>3. Apply Amdahl's Law formula.</p>
+        <p>4. Display the final speedup.</p>
+    </div>
+
+    <footer>
+        <p>CA Lab Project - Group G09</p>
+        <p>Muhammad Zain Ul Hassan - 24-CS-097</p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
