@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Amdahl's Law Calculator</title>
+    <title>Amdahl's Law Speedup Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,30 +15,38 @@
     </header>
 
     <div class="section">
-        <h2>1. Speedup Calculator</h2>
+        <h2>Speedup Calculator</h2>
 
         <label>Fraction Improved (0 to 1)</label>
-        <input type="number" id="fraction" placeholder="Example: 0.5">
+        <input type="number" id="fraction"
+        placeholder="Example: 0.5" step="any">
 
         <label>Speedup of Improved Part</label>
-        <input type="number" id="speedup" placeholder="Example: 2">
+        <input type="number" id="speedup"
+        placeholder="Example: 2" step="any">
 
-        <button type="button">Calculate Speedup</button>
+        <button type="button" onclick="calculateSpeedup()">
+            Calculate Speedup
+        </button>
 
-        <p id="result">Speedup result will appear here.</p>
+        <div class="result-area">
+            <h3>Calculation Result</h3>
+            <p id="result">Your result will appear here.</p>
+        </div>
     </div>
 
     <div class="section">
-        <h2>2. Improved Fraction Slider</h2>
+        <h2>Improved Fraction</h2>
+        <label>Fraction Slider</label>
 
-        <label>Change Fraction Improved</label>
-        <input type="range" id="slider" min="0" max="100" value="50">
+        <input type="range" id="slider"
+        min="0" max="100" value="50">
 
-        <p>Current Fraction: 50%</p>
+        <p>Use the slider to select a fraction.</p>
     </div>
 
     <div class="section">
-        <h2>3. Performance Comparison</h2>
+        <h2>Performance Comparison</h2>
 
         <p>Old Time</p>
         <div class="bar old">Old Time</div>
@@ -48,21 +56,19 @@
     </div>
 
     <div class="section">
-        <h2>4. Calculation Steps</h2>
+        <h2>Calculation Steps</h2>
 
-        <p>Step 1: Enter the fraction improved.</p>
-        <p>Step 2: Enter the speedup of improved part.</p>
-        <p>Step 3: Apply Amdahl's Law formula.</p>
-        <p>Step 4: Get the final speedup result.</p>
+        <p>1. Enter the fraction improved.</p>
+        <p>2. Enter the speedup of improved part.</p>
+        <p>3. Apply Amdahl's Law formula.</p>
+        <p>4. Display the final speedup.</p>
     </div>
 
-    <div class="section">
-        <h2>3 Solved Examples</h2>
-
-        <p>Example 1: Fraction = 0.5, Speedup = 2</p>
-        <p>Example 2: Fraction = 0.6, Speedup = 3</p>
-        <p>Example 3: Fraction = 0.8, Speedup = 4</p>
-    </div>
+    <footer>
+        <p>CA Lab Project - Group G09</p>
+        <p>Muhammad Zain Ul Hassan - 24-CS-097</p>
+        <p>Roohullah Saeed - 24-CS-102</p>
+    </footer>
 
 </div>
 
